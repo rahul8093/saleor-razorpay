@@ -3,6 +3,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import dotenv from "dotenv";
 import Razorpay from "razorpay";
+import path from "path";
 
 dotenv.config();
 
@@ -20,6 +21,11 @@ const razorpay = new Razorpay({
   key_id: razorpayKeyId,
   key_secret: razorpayKeySecret,
 });
+
+app.get("/manifest.json", (req, res) => {
+  res.sendFile(path.join(__dirname, "../manifest.json"));
+});
+
 
 // ✅ Health check
 app.get("/health", (_, res) => {
