@@ -2,17 +2,20 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-# Install all deps (including dev)
+# Install deps
 COPY package*.json ./
 RUN npm install
 
 # Copy source
 COPY . .
 
-# Build (compiles TypeScript → dist)
+# Fix permissions for binaries (especially tsc)
+RUN chmod +x node_modules/.bin/*
+
+# Build TypeScript → dist
 RUN npm run build
 
-# Remove dev dependencies for smaller image
+# Prune dev deps
 RUN npm prune --production
 
 EXPOSE 3000
