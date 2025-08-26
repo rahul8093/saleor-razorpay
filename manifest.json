@@ -1,12 +1,13 @@
 {
-  "id": "saleor-razorpay-app",
+  "id": "razorpay.saleor.app",
   "version": "1.0.0",
-  "name": "Saleor Razorpay App",
-  "webhooks": [
-    {
-      "name": "Payment Initialize",
-      "asyncEvents": ["PAYMENT_GATEWAY_INITIALIZE_SESSION"],
-      "targetUrl": "/saleor/payment/initialize"
-    }
-  ]
+  "name": "Razorpay Payments",
+  "about": "Custom Razorpay payment app for Saleor",
+  "dataPrivacy": "Payment details handled via Razorpay",
+  "homepageUrl": "https://saleor.io",
+  "supportUrl": "https://razorpay.com/support",
+  "permissions": ["HANDLE_PAYMENTS"],
+  "appUrl": "https://saleor-razorpay-app.onrender.com",
+  "tokenTargetUrl": "https://saleor-razorpay-app.onrender.com/register",
+  "extensions": []
 }
