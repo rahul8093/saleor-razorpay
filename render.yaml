@@ -6,11 +6,11 @@ services:
     branch: main
     autoDeploy: true
     envVars:
-      - key: rzp_test_R9lIUNYBjseeMH
+      - key: RAZORPAY_KEY_ID
         sync: false
-      - key: eHYKer3KfSBvPMctvp0c4L49
+      - key: RAZORPAY_KEY_SECRET
         sync: false
-      - key: https://store-b2elkwry.saleor.cloud/graphql/
+      - key: SALEOR_API_URL
         sync: false
       - key: SALEOR_APP_TOKEN
         sync: false
