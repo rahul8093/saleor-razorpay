@@ -8,6 +8,6 @@
   "supportUrl": "https://razorpay.com/support",
   "permissions": ["HANDLE_PAYMENTS"],
   "appUrl": "https://saleor-razorpay-app.onrender.com",
-  "tokenTargetUrl": "https://saleor-razorpay-app.onrender.com/register",
+  "tokenTargetUrl": "https://saleor-razorpay-app.onrender.com/api/register",
   "extensions": []
 }
