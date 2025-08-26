@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: saleor-razorpay-app
+    runtime: docker
+    plan: free
+    branch: main
+    autoDeploy: true
+    envVars:
+      - key: RAZORPAY_KEY_ID
+        sync: false
+      - key: RAZORPAY_KEY_SECRET
+        sync: false
+      - key: SALEOR_API_URL
+        sync: false
+      - key: SALEOR_APP_TOKEN
+        sync: false

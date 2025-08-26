@@ -1,0 +1,12 @@
+{
+  "id": "saleor-razorpay-app",
+  "version": "1.0.0",
+  "name": "Saleor Razorpay App",
+  "webhooks": [
+    {
+      "name": "Payment Initialize",
+      "asyncEvents": ["PAYMENT_GATEWAY_INITIALIZE_SESSION"],
+      "targetUrl": "/saleor/payment/initialize"
+    }
+  ]
+}
